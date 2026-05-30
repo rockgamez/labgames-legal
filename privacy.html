@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — LabGames</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 24px; color: #1a1a1a; line-height: 1.65; }
+  h1 { font-size: 2rem; margin-bottom: 4px; }
+  h2 { font-size: 1.25rem; margin-top: 36px; }
+  .meta { color: #888; margin-bottom: 32px; }
+  a { color: #0070c9; }
+  ul li { margin-bottom: 6px; }
+  footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid #eee; color: #888; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+  <p><a href="./">← Back</a></p>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Effective date: 2026-05-30 · Last updated: 2026-05-30</p>
+
+  <h2>1. Who we are</h2>
+  <p>
+    LabGames is an automated gaming-content pipeline operated by an individual content creator
+    based in Brazil. It generates and publishes original videos about video games on the
+    Facebook page <strong>@LABGAMES</strong> and on TikTok using the same handle.
+    For questions about this policy, contact
+    <a href="mailto:suporte@spectralsolutions.com.br">suporte@spectralsolutions.com.br</a>.
+  </p>
+
+  <h2>2. Scope</h2>
+  <p>
+    This policy describes how the LabGames pipeline handles data when it interacts with the
+    TikTok and Facebook platforms via their official APIs. The pipeline is operated by, and for,
+    a single content creator and does not collect or process personal data of any third party
+    or end user.
+  </p>
+
+  <h2>3. Data we access</h2>
+  <p>To publish videos on the operator's own social-media accounts, the pipeline accesses:</p>
+  <ul>
+    <li>
+      <strong>TikTok OAuth tokens</strong> (access token and refresh token) generated when the
+      operator authorizes the application. These are stored locally on the operator's machine
+      (encrypted environment file) and are used solely to call the TikTok Content Posting API.
+    </li>
+    <li>
+      <strong>Basic TikTok account information</strong> (open id, display name) returned by the
+      TikTok OAuth response, used only to confirm the authorization succeeded.
+    </li>
+    <li>
+      <strong>Facebook page access tokens</strong> and page identifiers, used to upload videos
+      to the operator's own Facebook page via the Meta Graph API.
+    </li>
+    <li>
+      <strong>Public game-data and images</strong> retrieved from third-party APIs (RAWG.io)
+      and public RSS feeds of gaming news outlets. No personal data is fetched from these
+      sources.
+    </li>
+  </ul>
+
+  <h2>4. Data we do <em>not</em> collect</h2>
+  <ul>
+    <li>We do not collect personal data of TikTok or Facebook viewers.</li>
+    <li>We do not track, profile, or sell any user information.</li>
+    <li>We do not place cookies or analytics on this site.</li>
+  </ul>
+
+  <h2>5. How data is used</h2>
+  <p>
+    The OAuth tokens are used exclusively to authenticate calls to the TikTok and Facebook APIs
+    in order to upload the operator's own pre-rendered video files and the associated caption
+    text. Tokens are never shared with any third party and are never transmitted outside of the
+    official TikTok and Facebook API endpoints.
+  </p>
+
+  <h2>6. Storage and security</h2>
+  <p>
+    Tokens are stored in a local environment file (<code>.env</code>) on the operator's
+    workstation, excluded from any version-control system. The file is accessible only to the
+    operator's local user account. Access tokens follow the expiration policies of each
+    platform (TikTok access token ~24 hours; refresh token up to 365 days). When a token
+    expires, the pipeline either refreshes it via the platform's official refresh endpoint or
+    requires re-authorization by the operator.
+  </p>
+
+  <h2>7. Data sharing</h2>
+  <p>
+    We do not share data with any third parties. The only network destinations the pipeline
+    contacts are:
+  </p>
+  <ul>
+    <li>TikTok official API (<code>open.tiktokapis.com</code>)</li>
+    <li>Meta Graph API (<code>graph.facebook.com</code>, <code>graph-video.facebook.com</code>)</li>
+    <li>RAWG.io public games database</li>
+    <li>Public RSS feeds of gaming news outlets</li>
+    <li>ElevenLabs text-to-speech API (for narration generation)</li>
+    <li>Anthropic Claude (for editorial generation)</li>
+  </ul>
+
+  <h2>8. Retention</h2>
+  <p>
+    Authentication tokens are retained on the operator's machine for as long as they are valid.
+    Generated videos and intermediate artifacts (transcripts, audio files) are retained locally
+    and are not transmitted anywhere except the social platforms where they are published.
+    The operator may delete any local artifact at any time.
+  </p>
+
+  <h2>9. Your rights</h2>
+  <p>
+    Because this application processes only the operator's own account data, no third-party
+    user data is collected. The operator may revoke the application's access to TikTok or
+    Facebook at any time via the respective platform's user settings, which immediately
+    terminates the pipeline's ability to publish on their behalf.
+  </p>
+  <p>
+    Under Brazil's <em>Lei Geral de Proteção de Dados</em> (LGPD, Law 13.709/2018) and the EU's
+    GDPR, individuals retain the right to access, correct, or delete personal data held by a
+    data controller. Requests can be sent to
+    <a href="mailto:suporte@spectralsolutions.com.br">suporte@spectralsolutions.com.br</a>.
+  </p>
+
+  <h2>10. Children's privacy</h2>
+  <p>
+    LabGames is not directed at children under 13. The platforms on which it publishes
+    (TikTok, Facebook) enforce their own age requirements for account ownership.
+  </p>
+
+  <h2>11. Changes to this policy</h2>
+  <p>
+    Material changes to this policy will be reflected here with an updated effective date.
+    Continued use of the pipeline after such changes constitutes acceptance of the new policy.
+  </p>
+
+  <h2>12. Contact</h2>
+  <p>
+    Email: <a href="mailto:suporte@spectralsolutions.com.br">suporte@spectralsolutions.com.br</a>
+  </p>
+
+  <footer>
+    © 2026 LabGames · See also our <a href="./terms.html">Terms of Service</a>.
+  </footer>
+</body>
+</html>
