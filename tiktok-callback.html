@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LabGames — TikTok OAuth Callback</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 520px; margin: 80px auto; padding: 0 24px; color: #1a1a1a; line-height: 1.55; text-align: center; }
+  .box { background: #f5f5f7; padding: 28px; border-radius: 14px; }
+  code { background: #e7e7ee; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; word-break: break-all; }
+  a.btn { display: inline-block; margin-top: 18px; background: #0070c9; color: #fff; padding: 12px 28px; border-radius: 999px; text-decoration: none; font-weight: 600; }
+</style>
+</head>
+<body>
+  <h1>Autorização TikTok recebida ✅</h1>
+  <p>Redirecionando pro app local…</p>
+  <div class="box">
+    <p>Se o redirecionamento não acontecer em 2s, clica no botão.</p>
+    <a id="continue" class="btn" href="#">Continuar</a>
+    <p style="margin-top:18px;font-size:0.85em;color:#666;">
+      Estamos passando os parâmetros da autorização do TikTok pro servidor local
+      <code>http://localhost:3000/tiktok-callback</code> que está rodando no seu
+      computador. Esta página existe porque o TikTok exige uma URL pública de
+      callback e não aceita <code>localhost</code> diretamente.
+    </p>
+  </div>
+  <script>
+    const params = window.location.search; // já vem com '?code=…&state=…'
+    const target = 'http://localhost:3000/tiktok-callback' + params;
+    document.getElementById('continue').href = target;
+    // auto-redirect
+    setTimeout(() => { window.location.replace(target); }, 1000);
+  </script>
+</body>
+</html>
